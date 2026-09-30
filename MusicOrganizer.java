@@ -53,10 +53,24 @@ public class MusicOrganizer
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
      */
+    
     public void removeFile(int index)
     {
         if(index >= 0 && index < files.size()) {
             files.remove(index);
         }
+    }
+    // question 1
+    public void checkIndex(int index){
+        if( index<0|| index>=files.size()){
+            System.out.println("invalid");
+        }
+    }
+    
+    public boolean validIndex(int index){
+        if( index<0|| index>=files.size()){
+          return false;
+        } else
+            return true;
     }
 }
